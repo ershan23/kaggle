@@ -3,3 +3,10 @@ train.csv
 test.csv
 train_processed.csv
 test_processed.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# CatBoost temp files
+catboost_info/
