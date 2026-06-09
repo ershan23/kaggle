@@ -1,0 +1,22 @@
+{
+  "data_dir": "MachineLearningCVE",
+  "output_dir": "outputs",
+  "model_dir": "models",
+  "target": "binary",
+  "positive_label": "ATTACK",
+  "sample_size": 300000,
+  "test_size": 0.3,
+  "random_state": 42,
+  "deduplicate": false,
+  "split_strategy": "random",
+  "holdout_files": [],
+  "feature_engineering": true,
+  "drop_zero_variance": true,
+  "models": ["random_forest", "xgboost", "lightgbm"],
+  "tuning": {
+    "n_iter": 12,
+    "cv": 3,
+    "scoring": "f1",
+    "n_jobs": -1
+  }
+}

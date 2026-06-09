@@ -1,0 +1,27 @@
+# Data files
+MachineLearningCVE/
+*.pcap
+*.pcapng
+*.csv
+
+# Runtime outputs
+outputs/
+models/
+analysis_outputs/
+.codex_upload_kaggle/
+agent.md
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
