@@ -1,0 +1,77 @@
+Loading data...
+train=(691369, 14), test=(296302, 13), pos_rate=0.7094
+features=47
+
+=== LightGBM ===
+  LGBM fold1: 0.962963 (best_iter=1271)
+  LGBM fold2: 0.963756 (best_iter=1158)
+  LGBM fold3: 0.964060 (best_iter=1011)
+  LGBM fold4: 0.964546 (best_iter=1317)
+  LGBM fold5: 0.963677 (best_iter=937)
+  LGBM OOF: 0.963798
+
+=== XGBoost ===
+  XGB  fold1: 0.963775 (best_iter=2059)
+  XGB  fold2: 0.964593 (best_iter=1685)
+  XGB  fold3: 0.964583 (best_iter=1740)
+  XGB  fold4: 0.965305 (best_iter=2183)
+  XGB  fold5: 0.964307 (best_iter=1675)
+  XGB  OOF: 0.964510
+
+=== CatBoost ===
+  CAT  fold1: 0.962697 (best_iter=2998)
+  CAT  fold2: 0.963264 (best_iter=2999)
+  CAT  fold3: 0.963438 (best_iter=2993)
+  CAT  fold4: 0.964268 (best_iter=2997)
+  CAT  fold5: 0.963169 (best_iter=2999)
+  CAT  OOF: 0.963366
+
+=== Blend weights={'lgbm': 0.2, 'xgb': 0.6, 'cat': 0.2} OOF AUC=0.964713 ===
+
+Saved: E:\py_project\playground-series\playground-series-s6e8\submission.csv
+CV summary: {
+  "lgbm": {
+    "fold_auc": [
+      0.9629627205197968,
+      0.9637562021579913,
+      0.9640602414496368,
+      0.9645458160947203,
+      0.9636765871221603
+    ],
+    "oof_auc": 0.9637980635180627,
+    "mean": 0.9638003134688612,
+    "std": 0.0005181028247925166
+  },
+  "xgb": {
+    "fold_auc": [
+      0.9637746021565473,
+      0.9645929601127518,
+      0.9645834835591183,
+      0.9653048540296573,
+      0.9643065902022513
+    ],
+    "oof_auc": 0.9645101722041284,
+    "mean": 0.9645124980120652,
+    "std": 0.0004952230761756795
+  },
+  "cat": {
+    "fold_auc": [
+      0.9626968079250116,
+      0.9632639777761123,
+      0.963438323223743,
+      0.9642683765114162,
+      0.9631685259658819
+    ],
+    "oof_auc": 0.9633661572064192,
+    "mean": 0.9633672022804329,
+    "std": 0.0005131723591937168
+  },
+  "blend": {
+    "weights": {
+      "lgbm": 0.2,
+      "xgb": 0.6,
+      "cat": 0.2
+    },
+    "oof_auc": 0.9647130927017571
+  }
+}
